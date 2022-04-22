@@ -32,6 +32,10 @@ namespace WebApplicationHerencia
             //nieta.propiedadpadre1 = 100;
             //nieta.Calculo();
             //nieta.funcion();
+            if (!IsPostBack)
+            {
+                Lectura();
+            }
         }
 
         private void Guardar()
@@ -87,14 +91,11 @@ namespace WebApplicationHerencia
             alumno.Carne = TextBoxCarne.Text;
             alumno.Nombre= TextBoxNombre.Text;
             alumno.Apellido = TextBoxApellido.Text;
-            alumno.Notas = NotasTemp;
+            alumno.Notas = NotasTemp.ToArray().ToList();
 
             alumnos.Add(alumno);
-
-            NotasTemp.Clear();
-
             Guardar();
-
+            NotasTemp.Clear();
         }
     }
 }
