@@ -9,16 +9,16 @@ namespace WebApplicationHerencia
 {
     public partial class _Default : Page
     {
-        List<Padre> padres = new List<Padre>();
-        List<Hija> hijas = new List<Hija>();
+        List<Persona> padres = new List<Persona>();
+        List<Alumno> hijas = new List<Alumno>();
         List<Nieta> nietas = new List<Nieta>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Padre padre = new Padre();
+            Persona padre = new Persona();
             padre.propiedadpadre1 = 1;
             padre.Calculo();
 
-            Hija hija = new Hija();
+            Alumno hija = new Alumno();
             hija.propiedadhija1 = 1;
             hija.propiedadpadre1 = 5;
             hija.Calculo();

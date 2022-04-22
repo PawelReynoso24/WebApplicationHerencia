@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApplicationHerencia
 {
-    public class Hija2: Padre
+    public class Profesor: Persona
     {
         public string Titulo { get; set; }
     }
