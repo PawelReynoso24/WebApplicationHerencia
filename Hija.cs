@@ -8,11 +8,6 @@ namespace WebApplicationHerencia
     public class Hija : Padre
     {
         public string Carne { get; set; }
-        public int Notas { get; set; }
-
-        public int edad()
-        {
-            return 7;
-        }
+        public List<int> Notas { get; set; }
     }
 }

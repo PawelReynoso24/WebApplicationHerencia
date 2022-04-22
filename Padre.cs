@@ -11,12 +11,11 @@ namespace WebApplicationHerencia
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public DateTime Nacimiento { get; set; }
-        public int Edad { get; set; }
 
         public int Calculo()
         {
             //podría ir cualquier cálculo de edad
-            return 5;
+            return (DateTime.Now.Year - Nacimiento.Year);
         }
     }
 }
